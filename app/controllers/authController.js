@@ -1,7 +1,5 @@
-expenseManager.controller('authController', function($scope,$state){
+    expenseManager.controller('authController', function($scope,$state){
 	$scope.submitLogin = function(email,password) {
-		console.log(email)
-		console.log(password)
 		if (email == "" || password == "" || email == undefined || password == undefined) {
             $scope.error = true;
             return false;
@@ -12,6 +10,7 @@ expenseManager.controller('authController', function($scope,$state){
             } else {
                 if (email == "user@qburst.com" && password == "user") { 
                     localStorage.setItem("name", "user");
+                    $scope.error = true;
                     $state.go('/dashboard');
                 }
                 else if (email == "admin@qburst.com" && password == "admin") {

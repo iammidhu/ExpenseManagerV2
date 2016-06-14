@@ -1,0 +1,17 @@
+[{
+    "date": "10-03-2013",
+    "purpose": "Electricity Bill",
+    "description": "Electricity Bill",
+    "amount" : "5000"
+}, {
+    "date": "11-03-2013",
+    "purpose": "Internet Bill",
+    "description": "Internet Bill",
+    "amount" : "5000"
+}, {
+    "date": "12-03-2013",
+    "purpose": "Miscellaneous",
+    "description": "Miscellaneous",
+    "amount" : "15000"
+}
+]

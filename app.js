@@ -1,38 +1,28 @@
-var expenseManager = angular.module('expenseManager', ['ui.router'])
+var expenseManager = angular.module('expenseManager', ['ui.router','datatables'])
 
 expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise("/");
+	$urlRouterProvider.otherwise("/login");
     $stateProvider
-	    .state('/', {
-	        url: "/",
+	    .state('/login', {
+	        url: "/login",
 	        templateUrl: 'app/partials/login.html',
 	        controller : 'authController'
 	    })
 	    .state('/dashboard', {
-	        url: "/",
+	        url: "/dashboard",
 	        templateUrl: 'app/partials/dashboard.html',
-	        controller : ''
+	        controller : 'expenseController'
 	    })
 	    .state('/dashboardAdmin', {
-	        url: "/",
+	        url: "/dashboardAdmin",
 	        templateUrl: 'app/partials/dashboardAdmin.html',
+	        controller : ''
+	    })
+	    .state('/expense', {
+	        url: "/expense",
+	        templateUrl: 'app/partials/expense.html',
 	        controller : ''
 	    });
 }]);
 
-expenseManager.directive('header', function () {
-    return {
-        restrict: 'A', //This menas that it will be used as an attribute and NOT as an element. I don't like creating custom HTML elements
-        replace: true,
-        templateUrl: "directives/header.html"
-    }
-});
-
-expenseManager.directive('footer', function () {
-    return {
-        restrict: 'A', //This menas that it will be used as an attribute and NOT as an element. I don't like creating custom HTML elements
-        replace: true,
-        templateUrl: "directives/footer.html"
-    }
-});
 
