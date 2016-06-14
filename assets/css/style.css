@@ -111,3 +111,7 @@ input:focus::-moz-placeholder {
     background-color: #E04A4A;
     color: white;
 }
+.red-button:hover{
+  transition: all ease-in 0.5s;
+  background-color: #AD0D0D;
+}
