@@ -8,5 +8,8 @@ angular.module('expenseManager', ['ngRoute'])
     when('/dashboard', {
         templateUrl: 'app/partials/dashboard.html',
     }).
+    when('/expense', {
+        templateUrl: 'app/partials/expense.html',
+    }).
     otherwise({ redirectTo: '/' })
 }]);
