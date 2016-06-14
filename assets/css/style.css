@@ -14,7 +14,7 @@ body {
     height: 90px;
 }
 .logo {
-    width: 30%;
+    width: 33%;
     display: inline-block;
     float: left;
 }
@@ -23,7 +23,7 @@ body {
     padding-top: 20px;
 }
 .heading, .menu-item {
-    width: 30%;
+    width: 33%;
     display: inline-block;
     text-align: center;
 }
@@ -37,6 +37,7 @@ body {
     bottom: 0;
     border: 1px solid #CCCCCC;
     text-align: center;
+    padding-top: 30px;
 }
 .about-us {
     padding: 50px;
@@ -48,7 +49,65 @@ Login page
 */
 
 .login-box {
-    margin: 0 auto;
-    height: 100px;
-    width: 100px;
+    margin: 10% auto;
+    height: 300px;
+    width: 500px;
+    border: 1px solid #28E8C5;
+}
+.login-header {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #28E8C5;
+}
+.login-body {
+    padding: 40px;
+}
+.row {
+    padding: 10px;
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    outline: none;
+    width: 100%;
+    transition: all ease-in 0.1s;
+}
+input:focus {
+    border: solid 1px #C3AAD0;
+    box-shadow: 0 0 5px 1px #61AAE4;
+}
+input::-webkit-input-placeholder {
+    color: #E04A4A;
+    font-size: 14px;
+}
+input:focus:-ms-input-placeholder {
+    color: #dcdcdc;
+}
+input:focus::-webkit-input-placeholder {
+    color: #dcdcdc;
+}
+input:focus::-moz-placeholder {
+    color: #dcdcdc;
+}
+.red-button {
+    padding: 8px;
+    width: 90px;
+    outline: none;
+    border: none;
+    background-color: #E04A4A;
+    color: white;
 }

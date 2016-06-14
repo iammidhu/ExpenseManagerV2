@@ -1,0 +1,27 @@
+@media (max-width: 749px) {
+  .logo, .menu-item{
+    width: 20%;
+  }
+  .heading{
+    width: 50%;
+  }
+  .login-box{
+    margin: 20% auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-heading{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo, .menu-item, .heading{
+    width: 100%;
+    text-align: center;
+  }
+  .login-box{
+    margin: 30% auto;
+    width: 450px;
+  }
+}
