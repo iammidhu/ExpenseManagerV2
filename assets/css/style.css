@@ -2,16 +2,26 @@
 Style goes here
 */
 
+html, body {
+    height: 100%;
+}
 body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin: 0 auto -3em;
+    /* the bottom margin is the negative value of the footer's height */
 }
 .main-heading {
     background-color: #2C3742;
     color: white;
     width: 100%;
-    height: 90px;
 }
 .logo {
     width: 33%;
@@ -21,6 +31,9 @@ body {
 .logo img {
     height: 40px;
     padding-top: 20px;
+}
+.logo a {
+  text-decoration: none;
 }
 .heading, .menu-item {
     width: 33%;
@@ -32,16 +45,19 @@ body {
 }
 .footer-container {
     width: 100%;
-    height: 50px;
     position: absolute;
     bottom: 0;
     border: 1px solid #CCCCCC;
     text-align: center;
     padding-top: 30px;
+    height: 3em;
 }
 .about-us {
     padding: 50px;
     border: 1px solid gray;
+}
+.error{
+  color: red;
 }
 
 /**
@@ -50,30 +66,30 @@ Login page
 
 .login-box {
     margin: 10% auto;
-    height: 300px;
+    min-height: 300px;
     width: 500px;
     border: 1px solid #28E8C5;
 }
 .login-header {
     color: #333;
-    font-size: 22px;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px solid #28E8C5;
 }
 .login-body {
     padding: 40px;
 }
 .row {
-    padding: 10px;
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
 }
 input {
+    color: #333;
     padding: 10px;
     border: solid 1px #dcdcdc;
     outline: none;
-    width: 80%;
+    width: 95%;
     transition: all ease-in 0.1s;
 }
 input:focus {

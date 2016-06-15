@@ -1,13 +1,13 @@
 <div class="login-box">
     <div class="login-header">
-        Login Here
+        <h2>Login Here</h2>
     </div>
     <div class="login-body">
         <form class="form" name="userForm" novalidate>
             <div class="row">
-                <span ng-if="error">Enter all details..</span>
-                <span ng-if="emailerror">Enter a valid email.</span>
-                <span ng-if="validationerror">Enter correct details.</span>
+                <span class="error" ng-if="error">Enter all details..</span>
+                <span class="error" ng-if="emailerror">Enter a valid email.</span>
+                <span class="error" ng-if="validationerror">Enter correct details.</span>
             </div>
             <div class="row">
                 <input type="text" placeholder="email" ng-model="email" id="email">
