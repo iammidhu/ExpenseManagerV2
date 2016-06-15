@@ -1,16 +1,22 @@
-<div class="wrapper" >
-	<div class="container">
-		<form class="form" name="userForm" novalidate>
-            <h1>Welcome</h1>
-            <span ng-if="error">Enter all details..</span>
+<div class="login-box">
+    <div class="login-header">
+        Login Here
+    </div>
+    <form class="form" name="userForm" novalidate>
+        <div class="login-body">
+            <span ng-if="error">Enter all details.</span>
             <span ng-if="emailerror">Enter a valid email.</span>
             <span ng-if="validationerror">Enter correct details.</span>
-            <div>
-    			<input type="text" placeholder="Email" ng-model="email" id="email">
-    			<input type="password" placeholder="Password" ng-model="password" id="password" >
-    			<button type="button" id="login-button" ng-click= "submitLogin(email,password)">Login</button>
+            <div class="row">
+                <input type="text" name="username" placeholder="Username" ng-model="email" value="">
             </div>
-		</form>	
-	</div>
+            <div class="row">
+                <input type="text" name="password" placeholder="password" ng-model="password" value="">
+            </div>
+            <div class="row">
+                <button type="submit" class="red-button" name="submit-button" ng-click= "submitLogin(email,password)">Login</button>
+            </div>
+        </div>
+    </form>
 </div>
 
