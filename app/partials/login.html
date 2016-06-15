@@ -3,14 +3,20 @@
         Login Here
     </div>
     <div class="login-body">
-        <div class="row">
-            <input type="text" name="username" placeholder="Username" value="">
-        </div>
-        <div class="row">
-            <input type="text" name="password" placeholder="password" value="">
-        </div>
-        <div class="row">
-            <button type="submit" class="red-button" name="submit-button">Login</button>
-        </div>
+        <form class="form" name="userForm" novalidate>
+            <div class="row">
+                <span ng-if="error">Enter all details..</span>
+                <span ng-if="emailerror">Enter a valid email.</span>
+                <span ng-if="validationerror">Enter correct details.</span>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="email" ng-model="email" id="email">
+            </div>
+            <div class="row">
+                <input type="password" placeholder="password" ng-model="password" id="password">
+            </div>
+            <div class="row">
+                <button type="submit" class="red-button" name="submit-button" id="login-button" ng-click="submitLogin(email,password)">Login</button>
+            </div>
+        </form>
     </div>
-</div>

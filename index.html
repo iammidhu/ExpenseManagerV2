@@ -4,19 +4,25 @@
 <head>
     <meta charset="utf-8">
     <title>Expense Manager V2</title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.dataTables.min.js"></script>
     <script src="lib/angular.min.js" charset="utf-8"></script>
-    <script src="lib/angular-route.min.js" charset="utf-8"></script>
+    <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="app/controllers/authController.js" charset="utf-8"></script>
+    <script src="app/controllers/expenseController.js" charset="utf-8"></script>
     <script src="app/directives/header.js" charset="utf-8"></script>
     <script src="app/directives/footer.js" charset="utf-8"></script>
+    <script src="lib/angular-datatables.min.js"></script>
+    <link rel="stylesheet" href="assets/css/angular-datatables.css">
     <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="assets/css/responsive.css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div header></div>
-    <div ng-view></div>
+    <div ui-view></div>
     <div footer></div>
 </body>
 

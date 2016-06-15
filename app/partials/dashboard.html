@@ -1,3 +1,6 @@
 <div class="dashboard">
-  Dashboard
+    <button ng-click="openExpense()">Add Expense</button>
+    <div ng-controller="expenseTableCtrl as showCase">
+        <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="row-border hover"></table>
+    </div>
 </div>

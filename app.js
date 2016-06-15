@@ -1,15 +1,26 @@
-angular.module('expenseManager', ['ngRoute'])
+var expenseManager = angular.module('expenseManager', ['ui.router','datatables'])
 
-.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.
-    when('/', {
-        templateUrl: 'app/partials/login.html',
-    }).
-    when('/dashboard', {
-        templateUrl: 'app/partials/dashboard.html',
-    }).
-    when('/expense', {
-        templateUrl: 'app/partials/expense.html',
-    }).
-    otherwise({ redirectTo: '/' })
+expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/login");
+    $stateProvider
+	    .state('/login', {
+	        url: "/login",
+	        templateUrl: 'app/partials/login.html',
+	        controller : 'authController'
+	    })
+	    .state('/dashboard', {
+	        url: "/dashboard",
+	        templateUrl: 'app/partials/dashboard.html',
+	        controller : 'expenseController'
+	    })
+	    .state('/dashboardAdmin', {
+	        url: "/dashboardAdmin",
+	        templateUrl: 'app/partials/dashboardAdmin.html',
+	        controller : ''
+	    })
+	    .state('/expense', {
+	        url: "/expense",
+	        templateUrl: 'app/partials/expense.html',
+	        controller : ''
+	    });
 }]);
