@@ -11,10 +11,10 @@
                     if (email == "user@qburst.com" && password == "user") {
                         localStorage.setItem("name", "user");
                         $scope.error = true;
-                        $state.go('/dashboard');
+                        $state.go('dashboard');
                     } else if (email == "admin@qburst.com" && password == "admin") {
                         localStorage.setItem("name", "admin");
-                        $state.go('/dashboardAdmin');
+                        $state.go('admin');
                     } else {
                         $scope.validationerror = true;
                     }
