@@ -33,7 +33,7 @@ body {
     padding-top: 20px;
 }
 .logo a {
-  text-decoration: none;
+    text-decoration: none;
 }
 .heading, .menu-item {
     width: 33%;
@@ -56,8 +56,8 @@ body {
     padding: 50px;
     border: 1px solid gray;
 }
-.error{
-  color: red;
+.error {
+    color: red;
 }
 
 /**
@@ -84,7 +84,7 @@ Login page
     width: 100%;
     text-align: center;
 }
-input {
+.input-type {
     color: #333;
     padding: 10px;
     border: solid 1px #dcdcdc;
@@ -92,21 +92,21 @@ input {
     width: 95%;
     transition: all ease-in 0.1s;
 }
-input:focus {
+.input-type:focus {
     border: solid 1px #C3AAD0;
     box-shadow: 0 0 5px 1px #61AAE4;
 }
-input::-webkit-input-placeholder {
+.input-type input::-webkit-input-placeholder {
     color: #E04A4A;
     font-size: 14px;
 }
-input:focus:-ms-input-placeholder {
+.input-type:focus:-ms-input-placeholder {
     color: #dcdcdc;
 }
-input:focus::-webkit-input-placeholder {
+.input-type:focus::-webkit-input-placeholder {
     color: #dcdcdc;
 }
-input:focus::-moz-placeholder {
+.input-type:focus::-moz-placeholder {
     color: #dcdcdc;
 }
 .red-button {
@@ -116,9 +116,10 @@ input:focus::-moz-placeholder {
     border: none;
     background-color: #E04A4A;
     color: white;
+    transition: all ease-in 0.5s;
+    border-radius: 3px;
 }
 .red-button:hover {
-    transition: all ease-in 0.5s;
     background-color: #AD0D0D;
 }
 
@@ -127,7 +128,14 @@ Dashboard page
 */
 
 .dashboard {
-    padding: 0 20% 0 20%;
+    margin: 0 auto;
+    padding: 30px;
     text-align: center;
     height: 100%;
+}
+.right {
+    float: right;
+}
+.set-margin {
+    margin-top: 50px;
 }
