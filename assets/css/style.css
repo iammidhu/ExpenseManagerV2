@@ -1,3 +1,181 @@
 /**
 Style goes here
 */
+
+html, body {
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    /* This line and the next line are not necessary unless you need IE6 support */
+    height: 100%;
+    margin: 0 auto -50px;
+    /* the bottom margin is the negative value of the footer's height */
+}
+.main-heading {
+    background-color: #2C3742;
+    color: white;
+    width: 100%;
+}
+.logo {
+    width: 33%;
+    display: inline-block;
+    float: left;
+}
+.logo img {
+    height: 40px;
+    padding-top: 20px;
+}
+.logo a {
+    text-decoration: none;
+}
+.heading, .menu-item {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+}
+.heading {
+    color: white;
+}
+.footer-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    padding-top: 30px;
+    height: 50px;
+}
+.about-us {
+    padding: 50px;
+    border: 1px solid gray;
+}
+.error {
+    color: red;
+}
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 0.3s;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-item a:hover {
+    border: 1px solid #28E8C5;
+}
+
+/**
+Login page
+*/
+
+.login-box {
+    margin: 10% auto;
+    min-height: 300px;
+    width: 500px;
+    border: 1px solid #28E8C5;
+}
+.login-header {
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #28E8C5;
+}
+.login-body {
+    padding: 40px;
+}
+.row {
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.input-type {
+    color: #333;
+    padding: 10px;
+    border: solid 1px #dcdcdc;
+    outline: none;
+    width: 95%;
+    transition: all ease-in 0.1s;
+}
+.input-type:focus {
+    border: solid 1px #C3AAD0;
+    box-shadow: 0 0 5px 1px #61AAE4;
+}
+.input-type input::-webkit-input-placeholder {
+    color: #E04A4A;
+    font-size: 14px;
+}
+.input-type:focus:-ms-input-placeholder {
+    color: #dcdcdc;
+}
+.input-type:focus::-webkit-input-placeholder {
+    color: #dcdcdc;
+}
+.input-type:focus::-moz-placeholder {
+    color: #dcdcdc;
+}
+.red-button {
+    padding: 8px;
+    width: 150px;
+    outline: none;
+    border: none;
+    background-color: #E04A4A;
+    color: white;
+    transition: all ease-in 0.5s;
+    border-radius: 3px;
+}
+.red-button:hover {
+    background-color: #AD0D0D;
+}
+
+/**
+Dashboard page
+*/
+
+.dashboard {
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
+.right {
+    float: right;
+}
+.set-margin {
+    margin-top: 50px;
+}
+.datepickerdemoBasicUsage {
+    /** Demo styles for mdCalendar. */
+}
+.datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px;
+}
+.datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 10px 0 0 25px;
+}
+
+.add-expense{
+  padding: 100px;
+  float: left;
+  width: 500px;
+}
+.reset-button{
+  padding: 8px;
+  width: 150px;
+  outline: none;
+  border: none;
+  background-color: #607D8B;
+  color: black;
+  transition: all ease-in 0.5s;
+  border-radius: 3px;
+}
+.reset-button:hover{
+  background-color: #C7C7C7;
+}

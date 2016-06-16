@@ -1,3 +1,22 @@
-<div class="">
-  Login page
-</div>
+<div class="login-box">
+    <div class="login-header">
+        <h2>Login Here</h2>
+    </div>
+    <div class="login-body">
+        <form class="form" name="userForm" novalidate>
+            <div class="row">
+                <span class="error" ng-if="error">Enter all details..</span>
+                <span class="error" ng-if="emailerror">Enter a valid email.</span>
+                <span class="error" ng-if="validationerror">Enter correct details.</span>
+            </div>
+            <div class="row">
+                <input type="text" class="input-type" placeholder="email" ng-model="email" id="email">
+            </div>
+            <div class="row">
+                <input type="password" class="input-type" placeholder="password" ng-model="password" id="password">
+            </div>
+            <div class="row">
+                <button type="submit" class="red-button" name="submit-button" id="login-button" ng-click="submitLogin(email,password)">Login</button>
+            </div>
+        </form>
+    </div>
