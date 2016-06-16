@@ -1,26 +1,105 @@
 /**
+Reset CSS
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/**
 Style goes here
 */
 
+* {
+    box-sizing: border-box;
+}
 html, body {
     height: 100%;
 }
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    font-family: sans-serif;
+    color: #292f33;
+    /*overflow: hidden; Note*/
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+input,textarea,select {
+    padding: 5px;
+    margin-bottom: 3px;
+    border: 1px solid #ddd;
+}
+form .error{
+    font-size: 12px;
+    color: #AD0D0D;
 }
 .wrapper {
     min-height: 100%;
     height: auto !important;
-    /* This line and the next line are not necessary unless you need IE6 support */
     height: 100%;
-    margin: 0 auto -50px;
-    /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -80px;
 }
-.main-heading {
+.header,.main-content {
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+.header {
     background-color: #2C3742;
     color: white;
+}
+.main-heading {
+    float: left;
     width: 100%;
 }
 .logo {
@@ -30,10 +109,11 @@ body {
 }
 .logo img {
     height: 40px;
-    padding-top: 20px;
+    /*padding-top: 20px; Note*/
 }
 .logo a {
     text-decoration: none;
+    float: left;
 }
 .heading, .menu-item {
     width: 33%;
@@ -42,19 +122,13 @@ body {
 }
 .heading {
     color: white;
+    padding-top: 6px;
 }
-.footer-container {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    border: 1px solid #CCCCCC;
-    text-align: center;
-    padding-top: 30px;
-    height: 50px;
-}
-.about-us {
-    padding: 50px;
-    border: 1px solid gray;
+.menu-item span {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
 }
 .error {
     color: red;
@@ -84,6 +158,9 @@ Login page
     width: 100%;
     text-align: center;
 }
+.row:last-child {
+    padding-bottom: 0;
+}
 .input-type {
     color: #333;
     padding: 10px;
@@ -110,22 +187,20 @@ Login page
     color: #dcdcdc;
 }
 .red-button {
-    padding: 8px;
-    width: 150px;
+    padding: 8px 30px;
     outline: none;
     border: none;
     background-color: #E04A4A;
     color: white;
     transition: all ease-in 0.5s;
     border-radius: 3px;
+    cursor: pointer;
 }
 .red-button:hover {
     background-color: #AD0D0D;
 }
 
-/**
-Dashboard page
-*/
+/***** Dashboard page ****/
 
 .dashboard {
     margin: 0 auto;
@@ -139,12 +214,122 @@ Dashboard page
 .set-margin {
     margin-top: 50px;
 }
-
-.datepickerdemoBasicUsage {
-  /** Demo styles for mdCalendar. */ }
-  .datepickerdemoBasicUsage md-content {
-    padding-bottom: 200px; }
-  .datepickerdemoBasicUsage .validation-messages {
+.datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px;
+}
+.datepickerdemoBasicUsage .validation-messages {
     font-size: 12px;
     color: #dd2c00;
-    margin: 10px 0 0 25px; }
+    margin: 10px 0 0 25px; 
+}
+
+.add-expense{
+     padding: 100px;
+     float: left;
+     width: 500px;
+}
+.form-box {
+    margin: 40px auto 0;
+    width: 500px;
+}
+.form-box .title {
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #28E8C5;
+    border-bottom: none;
+}
+.form-box form {
+    padding: 40px 20px;
+    float: left;
+    border: 1px solid #28E8C5;
+    width: 100%;
+    margin: 0 0 40px;
+}
+.expense-form .row {
+    float: right;
+    text-align: right;
+}
+.expense-form label {
+    float: left;
+    text-align: right;
+    margin: 5px 15px 0 0;
+    width: 100px;
+    font-size: 14px;
+}
+.expense-form input, .expense-form textarea, .expense-form select {
+    width: 340px;
+    float: left;
+    text-align: left;
+}
+.reset-button{
+     padding: 8px;
+     width: 150px;
+     outline: none;
+     border: none;
+     background-color: #607D8B;
+     color: black;
+     transition: all ease-in 0.5s;
+     border-radius: 3px;
+}
+.reset-button:hover{
+    background-color: #C7C7C7;
+}
+
+/********* Datatable *********/
+
+.dataTables_length,.dataTables_info {
+    float: left;
+}
+.dataTables_filter,.dataTables_paginate  {
+    float: right;
+}
+.dataTables_wrapper label,.dataTables_info,.dataTables_paginate  {
+    font-size: 14px;
+    font-weight: bold;
+}
+.dataTables_wrapper label input {
+    margin-left: 5px;
+}
+.dataTables_wrapper tr:first-child td {
+    padding: 0;
+}
+.dataTables_empty {
+    color: #999;
+    padding: 20px !important;
+    font-size: 14px;
+}
+.dataTables_filter {
+    margin-right: 0;
+}
+.dataTables_length,.dataTables_wrapper .dataTables_info {
+    margin-left: 0;
+}
+th {
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #eee;
+}
+td {
+    padding: 10px 18px;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+
+
+/********* Footer *********/
+
+.footer {
+    height: 80px;
+    display: table;
+    width: 100%;
+}
+.footer-container {
+    display: table-cell;
+    float: none;
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    text-align: center;
+    vertical-align: middle;
+}
