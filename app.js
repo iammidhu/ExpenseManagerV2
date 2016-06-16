@@ -1,27 +1,26 @@
-var expenseManager = angular.module('expenseManager', ['ui.router','datatables','ngResource','jkuri.datepicker'])
+var expenseManager = angular.module('expenseManager', ['ui.router','datatables','jkuri.datepicker'])
+
 expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/login");
     $stateProvider
-	    .state('/login', {
+	    .state('login', {
 	        url: "/login",
 	        templateUrl: 'app/partials/login.html',
 	        controller : 'authController'
 	    })
-	    .state('/dashboard', {
+	    .state('dashboard', {
 	        url: "/dashboard",
 	        templateUrl: 'app/partials/dashboard.html',
 	        controller : 'dashboardController'
 	    })
-	    .state('/dashboardAdmin', {
+	    .state('admin', {
 	        url: "/dashboardAdmin",
 	        templateUrl: 'app/partials/dashboardAdmin.html',
 	        controller : ''
 	    })
-	    .state('/expense', {
+	    .state('expense', {
 	        url: "/expense",
 	        templateUrl: 'app/partials/expense.html',
 	        controller : 'expenseController'
 	    });
 }]);
-
-

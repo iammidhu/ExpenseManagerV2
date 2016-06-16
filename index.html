@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Manager V2</title>
     <script src="lib/jquery.min.js"></script>
     <script src="lib/jquery.dataTables.min.js"></script>
@@ -24,13 +25,17 @@
     <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="assets/css/responsive.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/ngDatepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/datatables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
-
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div header></div>
-    <div ui-view></div>
+    <div class="wrapper">
+        <div header></div>
+        <div ui-view></div>
+    </div>
     <div footer></div>
 </body>
 

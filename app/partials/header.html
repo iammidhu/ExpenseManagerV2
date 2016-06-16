@@ -1,11 +1,14 @@
 <div class="main-heading">
     <div class="logo">
-        <img src="../assets/images/logoWhite.svg" alt="" />
+        <a ui-sref="login"><img src="../assets/images/logoWhite.svg" alt="" /></a>
     </div>
     <h1 class="heading">
         Expense Manager
     </h1>
-    <div class="menu-item">
-        About us
+    <div class="menu-item" ng-if="isLoggedIn">
+        <span>About us</span>
+    </div>
+    <div class="menu-item" ng-if="isLoggedIn">
+        <span>Logout</span>
     </div>
 </div>
