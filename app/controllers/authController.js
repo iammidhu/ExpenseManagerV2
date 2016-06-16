@@ -1,6 +1,7 @@
     expenseManager.controller('authController', function($scope, $state, $rootScope) {
 
         $rootScope.isLoggedIn = false;
+
         $scope.submitLogin = function(email, password) {
             if (email == "" || password == "" || email == undefined || password == undefined) {
                 $scope.error = true;

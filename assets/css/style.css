@@ -120,6 +120,9 @@ form .error{
     display: inline-block;
     text-align: center;
 }
+.menu-item {
+    text-align: right;
+}
 .heading {
     color: white;
     padding-top: 6px;
@@ -132,6 +135,16 @@ form .error{
 }
 .error {
     color: red;
+}
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 0.3s;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-item a:hover {
+    border: 1px solid #28E8C5;
 }
 
 /**
@@ -291,9 +304,6 @@ Login page
 .dataTables_wrapper label input {
     margin-left: 5px;
 }
-.dataTables_wrapper tr:first-child td {
-    padding: 0;
-}
 .dataTables_empty {
     color: #999;
     padding: 20px !important;
@@ -333,3 +343,5 @@ td {
     text-align: center;
     vertical-align: middle;
 }
+
+

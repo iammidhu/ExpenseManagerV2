@@ -6,20 +6,20 @@
       <ng-datepicker ng-model="newexpense.date"></ng-datepicker>
     </div>
     <div class="row">
-      <label for="">Purpose :</label>
-      <select ng-model="newexpense.purpose" ng-options="purpose for purpose in ['Electicity Bill', 'Internet Bill', 'Transportation']"></select>
+      <label for="">Purpose</label>
+      <select class="input-type" ng-model="newexpense.purpose" ng-options="purpose for purpose in ['Electicity Bill', 'Internet Bill', 'Transportation']"></select>
     </div>
     <div class="row">
-      <label for="">Description :</label>
-      <textarea name="desc" rows="8" cols="40" ng-model="newexpense.description"></textarea>
+      <label for="">Description</label>
+      <textarea name="desc" rows="8" cols="40" class="input-type" ng-model="newexpense.description"></textarea>
     </div>
     <div class="row">
-      <label for="">Amount :</label>
-      <input type="number" name="name" value="" ng-model="newexpense.amount">
+      <label for="">Amount</label>
+      <input type="number" name="name" value="" class="input-type" ng-model="newexpense.amount">
     </div>
     <div class="row">
-      <button type="button" class="red-button" name="submit" ng-click="addExpense()">Add</button>
-      <button type="reset" class="red-button" name="cancel">Cancel</button>
+      <button type="button" class="red-button" name="submit" ng-click="addExpense()">Add Expense</button>
+      <button type="reset" name="cancel" class="reset-button">Cancel</button>
     </div>
   </form>
 </div>
