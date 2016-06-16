@@ -8,12 +8,15 @@ expenseManager.controller('dashboardController',
             DTColumnDefBuilder.newColumnDef(2),
             DTColumnDefBuilder.newColumnDef(3).notSortable()
         ];
-        // $scope.dtOptions = DTOptionsBuilder.fromSource($scope.expenses)
-        // .withPaginationType('full_numbers');
-        // $scope.dtColumns = [
-        //     DTColumnBuilder.newColumn('date').withTitle('Date'),
-        //     DTColumnBuilder.newColumn('purpose').withTitle('Purpose'),
-        //     DTColumnBuilder.newColumn('description').withTitle('Description'),
-        //     DTColumnBuilder.newColumn('amount').withTitle('Amount')
-        // ];
+        $scope.removeExpense = removeExpense;
+        $scope.modifyPerson = modifyPerson;
+
+        function removeExpense(index) {
+            $scope.expenses.splice(index, 1);
+            localStorage.setItem('expense', JSON.stringify($scope.expenses));
+        }
+
+        function modifyPerson(index) {
+
+        }
     });

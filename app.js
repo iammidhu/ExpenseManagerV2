@@ -1,5 +1,5 @@
 
-var expenseManager = angular.module('expenseManager', ['ui.router','datatables','ngResource','jkuri.datepicker'])
+var expenseManager = angular.module('expenseManager', ['ui.router','datatables', 'ngResource','jkuri.datepicker'])
 
 expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/login");
