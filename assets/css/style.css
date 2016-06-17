@@ -235,6 +235,28 @@ Login page
     color: #dd2c00;
     margin: 10px 0 0 25px; 
 }
+.date-range {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.wrap-date-box {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+}
+.wrap-date-box .txt {
+    font-size: 12px;
+    margin-top: 5px;
+    float: left;
+    width: 100%;
+}
+.date-box {
+    margin-top: 5px;
+}
 
 .add-expense{
      padding: 100px;

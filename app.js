@@ -24,3 +24,7 @@ expenseManager.config(['$stateProvider', '$urlRouterProvider', function($statePr
 	        controller : 'expenseController'
 	    });
 }]);
+
+
+
+
