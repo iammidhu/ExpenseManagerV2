@@ -9,14 +9,18 @@ expenseManager.controller('dashboardController',
             DTColumnDefBuilder.newColumnDef(3).notSortable()
         ];
         $scope.removeExpense = removeExpense;
-        $scope.modifyPerson = modifyPerson;
+        $scope.editExpense = editExpense;
 
         function removeExpense(index) {
             $scope.expenses.splice(index, 1);
             localStorage.setItem('expense', JSON.stringify($scope.expenses));
         }
 
-        function modifyPerson(index) {
-
+        function editExpense(index) {
+          console.log($scope.expenses[index]);
+          var singleExpense = $scope.expenses[index];
+          $scope.date = singleExpense['date'];
+          $scope.purpose = singleExpense['purpose'];
+          debugger;
         }
     });

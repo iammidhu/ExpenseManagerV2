@@ -20,7 +20,7 @@
                     <td>{{ expense.description }}</td>
                     <td>{{ expense.amount }}</td>
                     <td>
-                        <button type="button" ng-click="dashboard.modifyPerson($index)" class="set-width reset-button"><i class="fa fa-edit"></i></button>
+                        <button type="button" ng-click="editExpense($index)" class="set-width reset-button"><i class="fa fa-edit"></i></button>
                         <button type="button" ng-click="removeExpense($index)" class="set-width red-button"><i class="fa fa-trash-o"></i></button>
                     </td>
                 </tr>
