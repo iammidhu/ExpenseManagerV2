@@ -1,11 +1,11 @@
 expenseManager.controller('dashboardController',
-    function($scope, $state, userdataService, $resource, DTOptionsBuilder, DTColumnDefBuilder) {
+    function($scope, $state, userdataService, DTOptionsBuilder, DTColumnDefBuilder) {
         $scope.expenses = userdataService.list();
         $scope.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers');
         $scope.dtColumnDefs = [
-            DTColumnDefBuilder.newColumnDef(0),
-            DTColumnDefBuilder.newColumnDef(1),
-            DTColumnDefBuilder.newColumnDef(2),
+            DTColumnDefBuilder.newColumnDef(0).notSortable(),
+            DTColumnDefBuilder.newColumnDef(1).notSortable(),
+            DTColumnDefBuilder.newColumnDef(2).notSortable(),
             DTColumnDefBuilder.newColumnDef(3).notSortable()
         ];
         $scope.removeExpense = removeExpense;
@@ -17,10 +17,8 @@ expenseManager.controller('dashboardController',
         }
 
         function editExpense(index) {
-          console.log($scope.expenses[index]);
-          var singleExpense = $scope.expenses[index];
-          $scope.date = singleExpense['date'];
-          $scope.purpose = singleExpense['purpose'];
-          debugger;
+            $state.go('expense', {
+                id: "index"
+            })
         }
     });

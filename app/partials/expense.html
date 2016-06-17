@@ -1,24 +1,29 @@
-<div class="add-expense">
-  <form class="" method="post">
-    <div class="row">
-      <label for="">Date</label>
-      <ng-datepicker ng-model="newexpense.date" ng-value="{{date}}"></ng-datepicker>
-    </div>
-    <div class="row">
-      <label for="">Purpose</label>
-      <select ng-value="{{purpose}}" class="input-type" ng-model="newexpense.purpose" ng-options="purpose for purpose in ['Electicity Bill', 'Internet Bill', 'Transportation']"></select>
-    </div>
-    <div class="row">
-      <label for="">Description</label>
-      <textarea name="desc" rows="8" cols="40" class="input-type" ng-model="newexpense.description"></textarea>
-    </div>
-    <div class="row">
-      <label for="">Amount ₹</label>
-      <input type="number" name="name" value="" class="input-type" ng-model="newexpense.amount">
-    </div>
-    <div class="row">
-      <button type="button" class="red-button" name="submit" ng-click="addExpense()">Add Expense</button>
-      <button type="reset" name="cancel" class="reset-button">Cancel</button>
-    </div>
-  </form>
+<div class="form-box">
+    <h3 class="title">Add Expense</h3>
+    <form class="expense-form" method="post">
+        <div class="row">
+            <label for="">Location</label>
+            <select class="input-type" ng-model="newexpense.location" ng-options="location for location in locations"></select>
+        </div>
+        <div class="row">
+            <label for="">Date</label>
+            <ng-datepicker ng-model="newexpense.date" ng-value="{{date}}"></ng-datepicker>
+        </div>
+        <div class="row">
+            <label for="">Purpose</label>
+            <select ng-value="{{purpose}}" class="input-type" ng-model="newexpense.purpose" ng-options="purpose for purpose in purposes"></select>
+        </div>
+        <div class="row">
+            <label for="">Description</label>
+            <textarea name="desc" rows="8" cols="40" class="input-type" ng-model="newexpense.description"></textarea>
+        </div>
+        <div class="row">
+            <label for="">Amount ₹</label>
+            <input type="number" name="name" value="" class="input-type" ng-model="newexpense.amount">
+        </div>
+        <div class="row">
+            <button type="button" class="red-button" name="submit" ng-click="addExpense()">Add Expense</button>
+            <button type="reset" name="cancel" class="reset-button">Cancel</button>
+        </div>
+    </form>
 </div>

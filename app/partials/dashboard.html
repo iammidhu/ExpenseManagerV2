@@ -3,7 +3,6 @@
         <button class="red-button right" ui-sref="expense">Add Expense</button>
     </div>
     <div class="row set-margin" dt-options="dashboard.dtOptions" dt-column-defs="dashboard.dtColumnDefs">
-
         <table datatable="ng" dt-options="dashboard.dtOptions" dt-column-defs="dashboard.dtColumnDefs" class="row-border hover">
             <thead>
                 <tr>
@@ -11,10 +10,13 @@
                     <th>Purpose</th>
                     <th>Description</th>
                     <th>Amount</th>
+                    <th>
+
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="expense in expenses track by $index">
+                <tr ng-repeat="expense in expenses">
                     <td>{{ expense.date }}</td>
                     <td>{{ expense.purpose }}</td>
                     <td>{{ expense.description }}</td>
