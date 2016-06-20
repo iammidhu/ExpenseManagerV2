@@ -8,7 +8,7 @@ expenseManager.filter('daterangeFilter', function ()
 		var start_date = (dateFrom && !isNaN(Date.parse(dateFrom))) ? Date.parse(dateFrom) : 0;
 		var end_date = (dateTo && !isNaN(Date.parse(dateTo))) ? Date.parse(dateTo) : new Date().getTime();
 
-		// if the conversations are loaded
+		// if the expenses are loaded
 		if (expenses && expenses.length > 0)
 		{
 			$.each(expenses, function (index, expenses)
@@ -21,12 +21,6 @@ expenseManager.filter('daterangeFilter', function ()
 				}
 			});
 
-		   /* for(var i = 0; i < result.length; i++){
-		        var amount = result[i].amount;
-		        total += total;
-    		}
-    		result.push(total);
-    		console.log(result)*/
 			return result;
 		}
 	};

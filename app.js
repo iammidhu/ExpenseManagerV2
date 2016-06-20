@@ -1,3 +1,4 @@
+
 var expenseManager = angular.module('expenseManager', ['ui.router','datatables','jkuri.datepicker'])
 
 expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
@@ -19,7 +20,7 @@ expenseManager.config(['$stateProvider', '$urlRouterProvider', function($statePr
 	        controller : 'dashboardAdminController'
 	    })
 	    .state('expense', {
-	        url: "/expense",
+	        url: "/expense/:id",
 	        templateUrl: 'app/partials/expense.html',
 	        controller : 'expenseController'
 	    });

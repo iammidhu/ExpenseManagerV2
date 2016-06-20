@@ -1,25 +1,47 @@
 <div class="form-box">
-  <h3 class="title">Add Expense</h3>
-  <form class="expense-form" method="post">
-    <div class="row">
-      <label for="">Date :</label>
-      <ng-datepicker ng-model="newexpense.date"></ng-datepicker>
-    </div>
-    <div class="row">
-      <label for="">Purpose</label>
-      <select class="input-type" ng-model="newexpense.purpose" ng-options="purpose for purpose in ['Electicity Bill', 'Internet Bill', 'Transportation']"></select>
-    </div>
-    <div class="row">
-      <label for="">Description</label>
-      <textarea name="desc" rows="8" cols="40" class="input-type" ng-model="newexpense.description"></textarea>
-    </div>
-    <div class="row">
-      <label for="">Amount</label>
-      <input type="number" name="name" value="" class="input-type" ng-model="newexpense.amount">
-    </div>
-    <div class="row">
-      <button type="button" class="red-button" name="submit" ng-click="addExpense()">Add Expense</button>
-      <button type="reset" name="cancel" class="reset-button">Cancel</button>
-    </div>
-  </form>
+    <h3 class="title" ng-if="!edit">Add Expense</h3>
+    <h3 class="title" ng-if="edit">Edit Expense</h3>
+    <form class="expense-form" name="expenseForm" novalidate ng-submit="expenseForm.$valid && addExpense()">
+        <div class="row">
+            <label for="location">Location</label>
+            <select class="input-type" name="location" ng-model="newexpense.location" ng-options="location for location in locations" required="">
+                <option value="">Select location</option>
+            </select>
+        </div>
+        <div class="row" ng-show="expenseForm.$submitted || expenseForm.location.$touched">
+            <span class="error" ng-show="expenseForm.location.$error.required">Please select your location.</span>
+        </div>
+        <div class="row">
+            <label for="newexpense.date">Date</label>
+            <ng-datepicker view-format="DD MMMM YYYY" name="date" ng-model="newexpense.date" required=" "></ng-datepicker>
+        </div>
+        <div class="row" ng-show="expenseForm.$submitted || expenseForm.date.$touched">
+            <span class="error" ng-show="expenseForm.date.$error.required">Please select date.</span>
+        </div>
+        <div class="row">
+            <label for="purpose">Purpose</label>
+            <select name="purpose" class="input-type" ng-model="newexpense.purpose" ng-options="purpose for purpose in purposes" required="">
+                <option value="">Select purpose</option>
+            </select>
+        </div>
+        <div class="row" ng-show="expenseForm.$submitted || expenseForm.purpose.$touched">
+            <span class="error" ng-show="expenseForm.purpose.$error.required">Please select your purpose.</span>
+        </div>
+        <div class="row">
+            <label for="">Description</label>
+            <textarea name="desc" rows="8" cols="40" class="input-type" ng-model="newexpense.description"></textarea>
+        </div>
+        <div class="row">
+            <label for="">Amount ₹</label>
+            <input type="number" name="amount" class="input-type" ng-model="newexpense.amount" required="">
+        </div>
+        <div class="row" ng-show="expenseForm.$submitted || expenseForm.amount.$touched">
+            <span class="error" ng-show="expenseForm.amount.$error.required">Please enter amount.</span>
+        </div>
+        <div class="row">
+            <button type="button" class="red-button" name="submit" ng-click="saveData(newexpense)" ng-if="edit">Save</button>
+            <button type="submit" class="red-button" name="submit" ng-if="!edit">Add Expense</button>
+            <button type="reset" ui-sref="dashboard" name="cancel" class="reset-button">Cancel</button>
+        </div>
+    </form>
 </div>

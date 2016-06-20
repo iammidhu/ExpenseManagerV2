@@ -2,23 +2,25 @@
     <h3 class="title">Login Here</h3>
     <form class="form" name="userForm" novalidate ng-submit="submitLogin(email,password)">
         <div class="login-body">
+          <div class="row" ng-if="validationerror">
+            <span class="error">Username or password is incorrect</span>
+          </div>
             <div class="row">
-                <input type="email" name="username" placeholder="Username" ng-model="email" required="">
+                <input type="email" class="input-type" name="username" placeholder="Username" ng-model="email" required="">
                 <div ng-show="userForm.$submitted || userForm.username.$touched">
                   <span class="error" ng-show="userForm.username.$error.required">Please enter your email.</span>
                   <span class="error" ng-show="userForm.username.$error.email">Please enter a valid email.</span>
                 </div>
             </div>
             <div class="row">
-                <input type="password" name="password" placeholder="password" ng-model="password"  required="">
+                <input class="input-type" type="password" name="password" placeholder="password" ng-model="password"  required="">
                 <div ng-show="userForm.$submitted || userForm.password.$touched">
                   <span class="error" ng-show="userForm.password.$error.required">Please enter your password.</span>
                 </div>
             </div>
             <div class="row">
-                <input type="submit" class="red-button" name="submit-button" svalue="Login" />
+                <input type="submit" class="red-button" name="submit-button" value="Login" />
             </div>
         </div>
     </form>
 </div>
-
