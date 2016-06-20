@@ -1,16 +1,33 @@
-<div class="dashboard">
-    <div class="row set-margin">
-        <table datatable="" class="row-border hover">
+<div class="dashboard" ng-controller="dashboardAdminController as dashboard">
+  <div class="row">
+    <label class="wrap-date-box">Show the expense <span clas="txt"> from:</span> <ng-datepicker ng-model="dateFrom" class="date-box" ng-change="dashboard.dtInstance"></ng-datepicker><span class="txt"> to:</span> <ng-datepicker ng-model="dateTo" class="date-box" ng-change="dashboard.dtInstance"></ng-datepicker></label>
+    <div class="location-search">
+     <label for="locations">Location:</label>
+     <select ng-model="dashboard.location" ng-options="location for location in locations">
+     </select>
+    </div>
+  </div>
+    <div class="row set-margin">          
+        <table datatable="ng" dt-options="dashboard.dtOptions" dt-column-defs="dashboard.dtColumnDefs" dt-instance="dtInstanceCallback" class="row-border hover" dt-instance="dtInstance">
             <thead>
-                <tr>
-                    <td>dsfds</td>
-                </tr>
+              <tr>
+                  <th>Date</th>
+                  <th>Purpose</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>ghj</td>
+                <tr ng-repeat="expense in expenses | daterangeFilter:dateFrom:dateTo">
+                    <td>{{ expense.date }}</td>
+                    <td>{{ expense.purpose }}</td>
+                    <td>{{ expense.description }}</td>
+                    <td>{{ expense.amount }}</td>
                 </tr>
             </tbody>
         </table>
+        <h3>Grand total:{{getTotal()}}</h3>
     </div>
+
+    
 </div>
