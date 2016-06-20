@@ -18,7 +18,7 @@ expenseManager.controller('dashboardController',
 
         function editExpense(index) {
             $state.go('expense', {
-                id: "index"
-            })
+                id: index
+            });
         }
     });

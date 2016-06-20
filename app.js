@@ -20,7 +20,7 @@ expenseManager.config(['$stateProvider', '$urlRouterProvider', function($statePr
 	        controller : 'dashboardAdminController'
 	    })
 	    .state('expense', {
-	        url: "/expense",
+	        url: "/expense/:id",
 	        templateUrl: 'app/partials/expense.html',
 	        controller : 'expenseController'
 	    });

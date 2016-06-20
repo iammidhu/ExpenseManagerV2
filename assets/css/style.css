@@ -186,7 +186,8 @@ Login page
     color: #dcdcdc;
 }
 .red-button {
-    padding: 8px 30px;
+    padding: 8px;
+    width: 140px;
     outline: none;
     border: none;
     background-color: #E04A4A;

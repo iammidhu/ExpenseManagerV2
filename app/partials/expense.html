@@ -1,6 +1,7 @@
 <div class="form-box">
-    <h3 class="title">Add Expense</h3>
-    <form class="expense-form" name="expenseForm" novalidate ng-submit="expenseForm.$valid && addExpense()" >
+    <h3 class="title" ng-if="!edit">Add Expense</h3>
+    <h3 class="title" ng-if="edit">Edit Expense</h3>
+    <form class="expense-form" name="expenseForm" novalidate ng-submit="expenseForm.$valid && addExpense()">
         <div class="row">
             <label for="location">Location</label>
             <select class="input-type" name="location" ng-model="newexpense.location" ng-options="location for location in locations" required="">
@@ -12,7 +13,7 @@
         </div>
         <div class="row">
             <label for="newexpense.date">Date</label>
-            <ng-datepicker name="date" ng-model="newexpense.date" required=""></ng-datepicker>
+            <ng-datepicker view-format="DD MMMM YYYY" name="date" ng-model="newexpense.date" required=""></ng-datepicker>
         </div>
         <div class="row" ng-show="expenseForm.$submitted || expenseForm.date.$touched">
             <span class="error" ng-show="expenseForm.date.$error.required">Please select date.</span>
@@ -32,14 +33,15 @@
         </div>
         <div class="row">
             <label for="">Amount ₹</label>
-            <input type="number" name="amount" value="" class="input-type" ng-model="newexpense.amount" required="">
+            <input type="number" name="amount" ng-value="{{amount}}" class="input-type" ng-model="newexpense.amount" required="">
         </div>
         <div class="row" ng-show="expenseForm.$submitted || expenseForm.amount.$touched">
             <span class="error" ng-show="expenseForm.amount.$error.required">Please enter amount.</span>
         </div>
         <div class="row">
-            <button type="submit" class="red-button" name="submit">Add Expense</button>
-            <button type="reset" name="cancel" class="reset-button">Cancel</button>
+            <button type="button" class="red-button" name="submit" ng-click="saveData(newexpense)" ng-if="edit">Save</button>
+            <button type="submit" class="red-button" name="submit" ng-if="!edit">Add Expense</button>
+            <button type="reset" ui-sref="dashboard" name="cancel" class="reset-button">Cancel</button>
         </div>
     </form>
 </div>
