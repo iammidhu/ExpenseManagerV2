@@ -5,10 +5,12 @@
     <h1 class="heading">
         Expense Manager
     </h1>
-    <div class="menu-item" ng-if="!isLoggedIn">
+    <div class="menu-item">
+      <div ng-if="!isLoggedIn">
         <span><a href="#">About us</a></span>
-    </div>
-    <div class="menu-item" ng-if="isLoggedIn">
+      </div>
+      <div ng-if="isLoggedIn">
         <span><a ng-click="logout()">Logout</a></span>
+      </div>
     </div>
 </div>

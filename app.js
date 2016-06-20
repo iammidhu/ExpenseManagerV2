@@ -1,5 +1,5 @@
 
-var expenseManager = angular.module('expenseManager', ['ui.router','datatables','ngResource','jkuri.datepicker'])
+var expenseManager = angular.module('expenseManager', ['ui.router','datatables','jkuri.datepicker'])
 
 expenseManager.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/login");
@@ -17,10 +17,10 @@ expenseManager.config(['$stateProvider', '$urlRouterProvider', function($statePr
 	    .state('admin', {
 	        url: "/dashboardAdmin",
 	        templateUrl: 'app/partials/dashboardAdmin.html',
-	        controller : ''
+	        controller : 'dashboardAdminController'
 	    })
 	    .state('expense', {
-	        url: "/expense",
+	        url: "/expense/:id",
 	        templateUrl: 'app/partials/expense.html',
 	        controller : 'expenseController'
 	    });
