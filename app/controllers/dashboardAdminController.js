@@ -1,7 +1,19 @@
-expenseManager.controller('dashboardAdminController', function($scope,$state,userdataService,$filter,DTOptionsBuilder, DTColumnBuilder){
+expenseManager.controller('dashboardAdminController', function($scope, $state, $filter, userdataService,DTOptionsBuilder, DTColumnBuilder){
 
     
     $scope.expenses = userdataService.list();
+    $scope.dateFrom, $scope.dateTo;
+
+    $scope.$watchGroup(['dateFrom', 'dateTo'], function(newValues, oldValues, scope) {
+    	console.log(newValues);
+    	console.log(oldValues);
+    	debugger;
+    	$filter('daterangeFilter')($scope.expenses, $scope.dateFrom, $scope.dateTo);
+	});
+    // $scope.$watch('dateFrom', 'dateTo', function(val){
+    // 	console.log(val);
+    // 	$filter('daterangeFilter')($scope.expenses, $scope.dateFrom, $scope.dateTo);
+    // })
     $scope.getTotal = function(){
 	    var total = 0;
 	    for(var i = 0; i < $scope.expenses.length; i++){

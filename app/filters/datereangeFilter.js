@@ -21,12 +21,12 @@ expenseManager.filter('daterangeFilter', function ()
 				}
 			});
 
-			/*var total = 0;
-		    for(var i = 0; i < result.length; i++){
+		   /* for(var i = 0; i < result.length; i++){
 		        var amount = result[i].amount;
-		        total += amount;
-    		}*/
-
+		        total += total;
+    		}
+    		result.push(total);
+    		console.log(result)*/
 			return result;
 		}
 	};
