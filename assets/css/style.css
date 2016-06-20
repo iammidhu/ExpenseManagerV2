@@ -208,6 +208,9 @@ Login page
     text-align: center;
     height: 100%;
 }
+.dashboard .row {
+    float: left;
+}
 .right {
     float: right;
 }
@@ -233,7 +236,7 @@ Login page
     font-size: 14px;
     font-weight: bold;
     float: left;
-    width: 100%;
+    width: 50%;
 }
 .wrap-date-box .txt {
     font-size: 12px;
@@ -296,6 +299,13 @@ Login page
 }
 .reset-button:hover {
     background-color: #C7C7C7;
+}
+.location-search {
+    float: right;
+}
+.location-search label {
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /********* Datatable *********/

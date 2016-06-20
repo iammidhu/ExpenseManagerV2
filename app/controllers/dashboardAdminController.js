@@ -1,7 +1,7 @@
 expenseManager.controller('dashboardAdminController', function($scope, $state, $filter, userdataService,DTOptionsBuilder, DTColumnDefBuilder){
 
     $scope.expenses = userdataService.list();
-
+    $scope.locations = ["Trivandrum", "Kochi", "Koratty", "Calicut", "Poland"];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers');
     $scope.dtColumnDefs = [
